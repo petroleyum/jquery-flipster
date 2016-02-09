@@ -1,4 +1,4 @@
-/*! jQuery.Flipster, v1.0.1 (built 2015-11-02) */
+/*! jQuery.Flipster, v1.0.1 (built 2016-02-09) */
 /* @group Flipster Essential Styles */
 .flipster {
   display: block;
@@ -15,6 +15,14 @@
   padding: 0;
   list-style-type: none;
   position: relative;
+}
+.flipster__container_wrapper {
+  margin: 0 100px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.flipster__container_wrapper .flipster__container {
+  margin-left: -50px;
 }
 .flipster__container {
   display: block;

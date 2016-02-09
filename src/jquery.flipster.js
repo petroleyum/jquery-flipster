@@ -61,6 +61,10 @@
             // [string|object]
             // Selector for the container of the flippin' items.
 
+            wrapItemContainer: false,
+            // [boolean]
+            // Wraps ul and items in div to make buttons appear outside of flipster.
+
             itemSelector: 'li',
             // [string|object]
             // Selector for children of `itemContainer` to flip
@@ -138,6 +142,7 @@
             main: 'flipster',
             active: 'flipster--active',
             container: 'flipster__container',
+            containerWrapper: 'flipster__container_wrapper',
 
             nav: 'flipster__nav',
             navChild: 'flipster__nav__child',
@@ -456,6 +461,10 @@
             function index() {
 
                 _container = self.find(settings.itemContainer).addClass(classes.container);
+
+                if(settings.wrapItemContainer){
+                    $(_container).wrap("<div class='"+ classes.containerWrapper + "'></div>");
+                }
 
                 _items = _container.find(settings.itemSelector);
 
